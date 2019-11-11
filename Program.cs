@@ -4,6 +4,19 @@ namespace FunctionDemo
 {
 	class Program
 	{
+		static void Main(string[] args)
+		{
+			Console.WriteLine("Function demo");
+			//Introduction();
+
+			//Friends();
+
+			SumArray();
+
+			//RandomArray();
+
+		}
+
 		static void Introduction()
 		{
 			// function that adds two numbers?
@@ -47,7 +60,7 @@ namespace FunctionDemo
 					// Vi behöver använda friends.Length
 
 					notValidIndex = false;
-					// Ctrl K + D    för att auto indentera koden
+					// Ctrl K + D    för att auto-indentera koden
 				}
 				catch (Exception)
 				{
@@ -67,21 +80,10 @@ namespace FunctionDemo
 				Console.WriteLine(friend);
 			}
 		}
-		static void Main(string[] args)
-		{
-			Console.WriteLine("Function demo");
-			//Introduction();
-
-			//Friends();
-
-			SumArray();
-
-			//RandomArray();
-
-		}
 
 		private static void RandomArray()
-		{/* 5.3 Skriv ett program som skapar en array med fem heltal, som ska slumpas fram. Programmet ska sedan gå igenom arrayen och skriva ut vilket det största och minsta talet är samt hur många tal som är udda.
+		{
+			/* 5.3 Skriv ett program som skapar en array med fem heltal, som ska slumpas fram. Programmet ska sedan gå igenom arrayen och skriva ut vilket det största och minsta talet är samt hur många tal som är udda.
 			*/
 			const int numberOfRandoms = 15;
 			int[] slumpadArray = new int[numberOfRandoms];
@@ -107,6 +109,7 @@ namespace FunctionDemo
 			Console.WriteLine($"Största värdet är {max} och minsta värdet är {min}.");
 		}
 
+		// Används av SumArray
 		static int CalculateSum(int[] array)
 		{
 			int sum = 0;
@@ -116,6 +119,7 @@ namespace FunctionDemo
 			}
 			return sum;
 		}
+
 		private static void SumArray()
 		{
 			/* 5.2 Skriv ett program som räknar ut summan av alla element i arrayen [2, 3, 5, 8, 13, 21, 34].
@@ -164,7 +168,7 @@ namespace FunctionDemo
 		static void ShowGreeting(string name)
 		{
 			Console.WriteLine($"Hello {name}!");
-			return;  // frivillig
+			return;  // return är frivilligt i en VOID funktion
 		}
 	}
 }
